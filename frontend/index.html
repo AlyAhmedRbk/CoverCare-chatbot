@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f9fc">
+    <title>CoverCare AI | Health Insurance Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">+</div>
+                <div>
+                    <h2>CoverCare</h2>
+                    <span>AI Insurance Assistant</span>
+                </div>
+            </div>
+
+            <button class="new-chat-btn" id="newChatBtn">
+                <span>＋</span> New conversation
+            </button>
+
+            <div class="sidebar-section">
+                <p class="section-label">QUICK QUESTIONS</p>
+
+                <button class="sidebar-prompt" data-prompt="Compare Plan A, Plan B and Plan C.">
+                    Compare insurance plans
+                </button>
+
+                <button class="sidebar-prompt" data-prompt="What benefits are included in Plan B?">
+                    Plan B benefits
+                </button>
+
+                <button class="sidebar-prompt" data-prompt="What is the annual coverage limit of Plan C?">
+                    Annual coverage limits
+                </button>
+
+                <button class="sidebar-prompt" data-prompt="Does Plan C include maternity coverage?">
+                    Maternity coverage
+                </button>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="status-dot"></div>
+                <span>Insurance assistant online</span>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h3>Health Insurance Assistant</h3>
+                    <p>Ask questions about your insurance coverage</p>
+                </div>
+
+                <div class="online-status">
+                    <span class="status-dot"></span>
+                    Online
+                </div>
+            </header>
+
+            <section class="chat-area" id="chatArea">
+
+                <div class="welcome-screen" id="welcomeScreen">
+
+                    <div class="welcome-icon">✚</div>
+
+                    <h1>Welcome to CoverCare AI</h1>
+
+                    <p>
+                        Your personal health insurance assistant.
+                        Explore available plans, understand coverage,
+                        and find an option that matches your needs.
+                    </p>
+
+                    <div class="suggestion-grid">
+
+                        <button class="suggestion-card"
+                            data-prompt="Compare Plan A, Plan B and Plan C.">
+                            <span class="suggestion-icon">⇄</span>
+                            <strong>Compare plans</strong>
+                            <small>Explore available insurance plans</small>
+                        </button>
+
+                        <button class="suggestion-card"
+                            data-prompt="What benefits are included in Plan B?">
+                            <span class="suggestion-icon">♡</span>
+                            <strong>Understand benefits</strong>
+                            <small>Learn about available coverage</small>
+                        </button>
+
+                        <button class="suggestion-card"
+                            data-prompt="What is the annual coverage limit of Plan C?">
+                            <span class="suggestion-icon">◉</span>
+                            <strong>Coverage limits</strong>
+                            <small>Understand annual plan limits</small>
+                        </button>
+
+                        <button class="suggestion-card"
+                            data-prompt="I need health insurance for my family. Which plan would you recommend?">
+                            <span class="suggestion-icon">♧</span>
+                            <strong>Find a suitable plan</strong>
+                            <small>Explore options for your family</small>
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="messages" id="messages"></div>
+
+            </section>
+
+            <footer class="composer-container">
+                <form class="composer" id="chatForm">
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Ask anything about health insurance..."
+                        rows="1"
+                        maxlength="2000"
+                        required
+                    ></textarea>
+
+                    <button type="submit" id="sendBtn" aria-label="Send message">
+                        <span>↑</span>
+                    </button>
+
+                </form>
+
+                <div class="composer-footer">
+                    <span>CoverCare AI can make mistakes. Verify important policy details.</span>
+                    <span id="connectionStatus">Connecting...</span>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
